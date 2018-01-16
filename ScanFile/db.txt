@@ -1,0 +1,359 @@
+﻿USE [master]
+GO
+DROP DATABASE SCANFILE
+GO
+/****** Object:  Database [SCANFILE]    Script Date: 2018-01-17 6:49:39 AM ******/
+CREATE DATABASE [SCANFILE]
+GO
+USE SCANFILE
+GO
+ALTER DATABASE [SCANFILE] SET COMPATIBILITY_LEVEL = 110
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [SCANFILE].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [SCANFILE] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [SCANFILE] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [SCANFILE] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [SCANFILE] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [SCANFILE] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [SCANFILE] SET AUTO_CLOSE ON 
+GO
+ALTER DATABASE [SCANFILE] SET AUTO_CREATE_STATISTICS ON 
+GO
+ALTER DATABASE [SCANFILE] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [SCANFILE] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [SCANFILE] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [SCANFILE] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [SCANFILE] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [SCANFILE] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [SCANFILE] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [SCANFILE] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [SCANFILE] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [SCANFILE] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [SCANFILE] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [SCANFILE] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [SCANFILE] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [SCANFILE] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [SCANFILE] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [SCANFILE] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [SCANFILE] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [SCANFILE] SET  MULTI_USER 
+GO
+ALTER DATABASE [SCANFILE] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [SCANFILE] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [SCANFILE] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [SCANFILE] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+USE [SCANFILE]
+GO
+/****** Object:  Table [dbo].[FILEEXE]    Script Date: 2018-01-17 6:49:40 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[FILEEXE](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[TEN] [nvarchar](max) NULL,
+	[DUONGDAN] [nvarchar](max) NULL,
+	[solansudung] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET IDENTITY_INSERT [dbo].[FILEEXE] ON 
+
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2518, N'7z', N'C:\Program Files\7-Zip\7z.exe', 1)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2519, N'7zFM', N'C:\Program Files\7-Zip\7zFM.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2520, N'7zG', N'C:\Program Files\7-Zip\7zG.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2521, N'AGF3DPrinterDriver', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\AGF3DPrinterDriver.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2522, N'convert', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\convert.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2523, N'flitetranscoder', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\flitetranscoder.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2524, N'LogTransport2', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\LogTransport2.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2525, N'node', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\node.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2526, N'Photoshop', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Photoshop.exe', 1)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2527, N'PhotoshopPrefsManager', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\PhotoshopPrefsManager.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2528, N'pngquant', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\pngquant.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2529, N'sniffer', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\sniffer.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2530, N'Droplet Template', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\Droplet Template.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2531, N'CEPHtmlEngine', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\CEP\CEPHtmlEngine\CEPHtmlEngine.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2532, N'amecommand', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\DynamicLinkMediaServer\amecommand.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2533, N'dynamiclinkmediaserver', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\DynamicLinkMediaServer\dynamiclinkmediaserver.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2534, N'ImporterREDServer', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\DynamicLinkMediaServer\ImporterREDServer.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2535, N'Adobe QT32 Server', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\DynamicLinkMediaServer\32\Adobe QT32 Server.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2536, N'dynamiclinkmanager', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\DynamicLinkMediaServer\32\dynamiclinkmanager.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2537, N'Adobe Spaces Helper', N'C:\Program Files\Adobe\Adobe Photoshop CC 2017\Required\Plug-Ins\Spaces\Adobe Spaces Helper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2538, N'CNAB5UND', N'C:\Program Files\Canon\PrnUninstall\Canon LBP3300\CNAB5UND.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2539, N'upgrade', N'C:\Program Files\Common Files\AV\Kaspersky Free\upgrade.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2540, N'DW20', N'C:\Program Files\Common Files\microsoft shared\DW\DW20.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2541, N'DWTRIG20', N'C:\Program Files\Common Files\microsoft shared\DW\DWTRIG20.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2542, N'EQNEDT32', N'C:\Program Files\Common Files\microsoft shared\EQUATION\EQNEDT32.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2543, N'FlickLearningWizard', N'C:\Program Files\Common Files\microsoft shared\ink\FlickLearningWizard.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2544, N'InputPersonalization', N'C:\Program Files\Common Files\microsoft shared\ink\InputPersonalization.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2545, N'mip', N'C:\Program Files\Common Files\microsoft shared\ink\mip.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2546, N'ShapeCollector', N'C:\Program Files\Common Files\microsoft shared\ink\ShapeCollector.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2547, N'TabTip', N'C:\Program Files\Common Files\microsoft shared\ink\TabTip.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2548, N'msinfo32', N'C:\Program Files\Common Files\microsoft shared\MSInfo\msinfo32.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2549, N'CMigrate', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\CMigrate.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2550, N'CSISYNCCLIENT', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\CSISYNCCLIENT.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2551, N'FLTLDR', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\FLTLDR.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2552, N'LICLUA', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\LICLUA.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2553, N'MSOICONS', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\MSOICONS.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2554, N'MSOSQM', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\MSOSQM.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2555, N'MSOXMLED', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\MSOXMLED.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2556, N'Oarpmany', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\Oarpmany.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2557, N'OLicenseHeartbeat', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\OLicenseHeartbeat.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2558, N'ODeploy', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\Office Setup Controller\ODeploy.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2559, N'Setup', N'C:\Program Files\Common Files\microsoft shared\OFFICE15\Office Setup Controller\Setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2560, N'SmartTagInstall', N'C:\Program Files\Common Files\microsoft shared\Smart Tag\SmartTagInstall.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2561, N'OSE', N'C:\Program Files\Common Files\microsoft shared\Source Engine\OSE.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2562, N'TFSFieldMapping', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\12.0\TFSFieldMapping.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2563, N'TfsNop', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\12.0\TfsNop.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2564, N'TfsProtocolHandler', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\12.0\TfsProtocolHandler.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2565, N'TfsServiceHost', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\12.0\TfsServiceHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2566, N'TestAgentInstaller', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\12.0\LabManagement\TestAgentInstaller.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2567, N'TFSFieldMapping', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\14.0\TFSFieldMapping.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2568, N'TfsProtocolHandler', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\14.0\TfsProtocolHandler.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2569, N'TfsServiceHost', N'C:\Program Files\Common Files\microsoft shared\Team Foundation Server\14.0\TfsServiceHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2570, N'VSTOInstaller', N'C:\Program Files\Common Files\microsoft shared\VSTO\10.0\VSTOInstaller.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2571, N'install', N'C:\Program Files\Common Files\microsoft shared\VSTO\10.0\Microsoft Visual Studio 2010 Tools for Office Runtime (x64)\install.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2572, N'WorkflowDebugHost', N'C:\Program Files\Common Files\microsoft shared\WF\amd64\WorkflowDebugHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2573, N'msdeploy', N'C:\Program Files\IIS\Microsoft Web Deploy V3\msdeploy.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2574, N'powershellcustomhost', N'C:\Program Files\IIS\Microsoft Web Deploy V3\Scripts\powershellcustomhost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2575, N'appcmd', N'C:\Program Files\IIS Express\appcmd.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2576, N'iisexpress', N'C:\Program Files\IIS Express\iisexpress.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2577, N'IisExpressAdminCmd', N'C:\Program Files\IIS Express\IisExpressAdminCmd.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2578, N'iisexpresstray', N'C:\Program Files\IIS Express\iisexpresstray.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2579, N'ExtExport', N'C:\Program Files\Internet Explorer\ExtExport.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2580, N'iediagcmd', N'C:\Program Files\Internet Explorer\iediagcmd.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2581, N'ieinstal', N'C:\Program Files\Internet Explorer\ieinstal.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2582, N'ielowutil', N'C:\Program Files\Internet Explorer\ielowutil.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2583, N'iexplore', N'C:\Program Files\Internet Explorer\iexplore.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2584, N'Lingoes', N'C:\Program Files\Lingoes\Translator2\Lingoes.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2585, N'Lingoes64', N'C:\Program Files\Lingoes\Translator2\Lingoes64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2586, N'lingoes_chrome_extension32', N'C:\Program Files\Lingoes\Translator2\lingoes_chrome_extension32.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2587, N'lingoes_update32', N'C:\Program Files\Lingoes\Translator2\lingoes_update32.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2588, N'lingoes_update64', N'C:\Program Files\Lingoes\Translator2\lingoes_update64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2589, N'lwcnc32', N'C:\Program Files\Lingoes\Translator2\lwcnc32.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2590, N'lwcnc64', N'C:\Program Files\Lingoes\Translator2\lwcnc64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2591, N'unins000', N'C:\Program Files\Lingoes\Translator2\unins000.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2592, N'SQLDumper', N'C:\Program Files\Microsoft Analysis Services\AS OLEDB\110\SQLDumper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2593, N'HelpLibAgent', N'C:\Program Files\Microsoft Help Viewer\v1.0\HelpLibAgent.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2594, N'HelpLibManager', N'C:\Program Files\Microsoft Help Viewer\v1.0\HelpLibManager.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2595, N'HlpViewer', N'C:\Program Files\Microsoft Help Viewer\v1.0\HlpViewer.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2596, N'install', N'C:\Program Files\Microsoft Help Viewer\v1.0\Microsoft Help Viewer 1.1\install.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2597, N'CLVIEW', N'C:\Program Files\Microsoft Office\Office15\CLVIEW.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2598, N'CNFNOT32', N'C:\Program Files\Microsoft Office\Office15\CNFNOT32.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2599, N'EXCEL', N'C:\Program Files\Microsoft Office\Office15\EXCEL.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2600, N'excelcnv', N'C:\Program Files\Microsoft Office\Office15\excelcnv.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2601, N'FIRSTRUN', N'C:\Program Files\Microsoft Office\Office15\FIRSTRUN.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2602, N'GRAPH', N'C:\Program Files\Microsoft Office\Office15\GRAPH.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2603, N'GROOVE', N'C:\Program Files\Microsoft Office\Office15\GROOVE.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2604, N'IEContentService', N'C:\Program Files\Microsoft Office\Office15\IEContentService.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2605, N'misc', N'C:\Program Files\Microsoft Office\Office15\misc.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2606, N'msoev', N'C:\Program Files\Microsoft Office\Office15\msoev.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2607, N'MSOHTMED', N'C:\Program Files\Microsoft Office\Office15\MSOHTMED.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2608, N'msoia', N'C:\Program Files\Microsoft Office\Office15\msoia.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2609, N'MSOSYNC', N'C:\Program Files\Microsoft Office\Office15\MSOSYNC.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2610, N'msotd', N'C:\Program Files\Microsoft Office\Office15\msotd.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2611, N'MSOUC', N'C:\Program Files\Microsoft Office\Office15\MSOUC.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2612, N'MSPUB', N'C:\Program Files\Microsoft Office\Office15\MSPUB.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2613, N'MSQRY32', N'C:\Program Files\Microsoft Office\Office15\MSQRY32.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2614, N'NAMECONTROLSERVER', N'C:\Program Files\Microsoft Office\Office15\NAMECONTROLSERVER.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2615, N'ONENOTE', N'C:\Program Files\Microsoft Office\Office15\ONENOTE.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2616, N'ONENOTEM', N'C:\Program Files\Microsoft Office\Office15\ONENOTEM.EXE', 0)
+GO
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2617, N'OSPPREARM', N'C:\Program Files\Microsoft Office\Office15\OSPPREARM.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2618, N'OUTLOOK', N'C:\Program Files\Microsoft Office\Office15\OUTLOOK.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2619, N'PDFREFLOW', N'C:\Program Files\Microsoft Office\Office15\PDFREFLOW.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2620, N'POWERPNT', N'C:\Program Files\Microsoft Office\Office15\POWERPNT.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2621, N'PPTICO', N'C:\Program Files\Microsoft Office\Office15\PPTICO.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2622, N'protocolhandler', N'C:\Program Files\Microsoft Office\Office15\protocolhandler.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2623, N'SCANPST', N'C:\Program Files\Microsoft Office\Office15\SCANPST.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2624, N'SELFCERT', N'C:\Program Files\Microsoft Office\Office15\SELFCERT.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2625, N'SETLANG', N'C:\Program Files\Microsoft Office\Office15\SETLANG.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2626, N'WINWORD', N'C:\Program Files\Microsoft Office\Office15\WINWORD.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2627, N'Wordconv', N'C:\Program Files\Microsoft Office\Office15\Wordconv.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2628, N'WORDICON', N'C:\Program Files\Microsoft Office\Office15\WORDICON.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2629, N'XLICONS', N'C:\Program Files\Microsoft Office\Office15\XLICONS.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2630, N'setup', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2631, N'FixSqlRegistryKey_ia64', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\FixSqlRegistryKey_ia64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2632, N'FixSqlRegistryKey_x64', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\FixSqlRegistryKey_x64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2633, N'FixSqlRegistryKey_x86', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\FixSqlRegistryKey_x86.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2634, N'LandingPage', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\LandingPage.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2635, N'setup100', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\setup100.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2636, N'SetupARP', N'C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\Release\x64\SetupARP.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2637, N'DISTRIB', N'C:\Program Files\Microsoft SQL Server\110\COM\DISTRIB.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2638, N'logread', N'C:\Program Files\Microsoft SQL Server\110\COM\logread.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2639, N'qrdrsvc', N'C:\Program Files\Microsoft SQL Server\110\COM\qrdrsvc.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2640, N'replmerg', N'C:\Program Files\Microsoft SQL Server\110\COM\replmerg.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2641, N'snapshot', N'C:\Program Files\Microsoft SQL Server\110\COM\snapshot.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2642, N'tablediff', N'C:\Program Files\Microsoft SQL Server\110\COM\tablediff.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2643, N'DTExec', N'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2644, N'dtshost', N'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\dtshost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2645, N'DTSWizard', N'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTSWizard.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2646, N'dtutil', N'C:\Program Files\Microsoft SQL Server\110\DTS\Binn\dtutil.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2647, N'sqlservr', N'C:\Program Files\Microsoft SQL Server\110\LocalDB\Binn\sqlservr.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2648, N'setup', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2649, N'FixSqlRegistryKey_x64', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\x64\FixSqlRegistryKey_x64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2650, N'FixSqlRegistryKey_x86', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\x64\FixSqlRegistryKey_x86.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2651, N'LandingPage', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\x64\LandingPage.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2652, N'ScenarioEngine', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\x64\ScenarioEngine.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2653, N'SetupARP', N'C:\Program Files\Microsoft SQL Server\110\Setup Bootstrap\SQLServer2012\x64\SetupARP.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2654, N'SqlDumper', N'C:\Program Files\Microsoft SQL Server\110\Shared\SqlDumper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2655, N'sqlsqm', N'C:\Program Files\Microsoft SQL Server\110\Shared\sqlsqm.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2656, N'SqlWtsn', N'C:\Program Files\Microsoft SQL Server\110\Shared\SqlWtsn.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2657, N'rdbgsetup', N'C:\Program Files\Microsoft SQL Server\110\Shared\VS2008\1033\rdbgsetup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2658, N'bcp', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\bcp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2659, N'OSQL', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\OSQL.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2660, N'SQLCMD', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SQLCMD.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2661, N'SQLdiag', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SQLdiag.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2662, N'SqlLocalDB', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SqlLocalDB.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2663, N'SqlLogShip', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SqlLogShip.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2664, N'SSBDiagnose', N'C:\Program Files\Microsoft SQL Server\110\Tools\Binn\SSBDiagnose.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2665, N'sqlservr', N'C:\Program Files\Microsoft SQL Server\130\LocalDB\Binn\sqlservr.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2666, N'SqlDumper', N'C:\Program Files\Microsoft SQL Server\130\Shared\SqlDumper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2667, N'SqlLocalDB', N'C:\Program Files\Microsoft SQL Server\130\Tools\Binn\SqlLocalDB.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2668, N'sqlwriter', N'C:\Program Files\Microsoft SQL Server\90\Shared\sqlwriter.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2669, N'vsdiag_regwcf', N'C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\vsdiag_regwcf.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2670, N'Microsoft.XslDebugger.Host', N'C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Xml\Microsoft.XslDebugger.Host.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2671, N'vsdiag_regwcf', N'C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\vsdiag_regwcf.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2672, N'Microsoft.XslDebugger.Host', N'C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Xml\Microsoft.XslDebugger.Host.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2673, N'VsEtwService', N'C:\Program Files\Microsoft Visual Studio 12.0\Common7\Packages\Debugger\Services\VsEtwService.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2674, N'Code', N'C:\Program Files\Microsoft VS Code\Code.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2675, N'unins000', N'C:\Program Files\Microsoft VS Code\unins000.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2676, N'winpty-agent', N'C:\Program Files\Microsoft VS Code\resources\app\node_modules\node-pty\build\Release\winpty-agent.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2677, N'rg', N'C:\Program Files\Microsoft VS Code\resources\app\node_modules\vscode-ripgrep\bin\rg.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2678, N'CodeHelper', N'C:\Program Files\Microsoft VS Code\resources\app\out\vs\workbench\services\files\node\watcher\win32\CodeHelper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2679, N'nvcplui', N'C:\Program Files\NVIDIA Corporation\Control Panel Client\nvcplui.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2680, N'NvGpuUtilization', N'C:\Program Files\NVIDIA Corporation\Control Panel Client\NvGpuUtilization.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2681, N'nvsmartmaxapp', N'C:\Program Files\NVIDIA Corporation\Display\nvsmartmaxapp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2682, N'nvsmartmaxapp64', N'C:\Program Files\NVIDIA Corporation\Display\nvsmartmaxapp64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2683, N'nvtray', N'C:\Program Files\NVIDIA Corporation\Display\nvtray.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2684, N'NVDisplay.Container', N'C:\Program Files\NVIDIA Corporation\Display.NvContainer\NVDisplay.Container.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2685, N'dbInstaller', N'C:\Program Files\NVIDIA Corporation\Drs\dbInstaller.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2686, N'setup', N'C:\Program Files\NVIDIA Corporation\Installer2\CoreTemp.{04B6B986-6A6F-4DD0-8705-A60A5C1AE235}\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2687, N'NVMUP', N'C:\Program Files\NVIDIA Corporation\Installer2\CoreTemp.{623FFC47-AE07-4468-8B61-1D1CB9CA347F}\NVMUP.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2688, N'setup', N'C:\Program Files\NVIDIA Corporation\Installer2\CoreTemp.{623FFC47-AE07-4468-8B61-1D1CB9CA347F}\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2689, N'setup', N'C:\Program Files\NVIDIA Corporation\Installer2\CoreTemp.{975A8C64-6A24-454B-A314-DA5DA8D4FA1E}\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2690, N'setup', N'C:\Program Files\NVIDIA Corporation\Installer2\CoreTemp.{A6BF4C77-6423-4726-A79B-82B631DAD0AB}\setup.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2691, N'SETUP', N'C:\Program Files\NVIDIA Corporation\Installer2\InstallerCore\SETUP.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2692, N'MCU', N'C:\Program Files\NVIDIA Corporation\NVSMI\MCU.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2693, N'nvdebugdump', N'C:\Program Files\NVIDIA Corporation\NVSMI\nvdebugdump.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2694, N'nvidia-smi', N'C:\Program Files\NVIDIA Corporation\NVSMI\nvidia-smi.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2695, N'DTSAudioService64', N'C:\Program Files\Realtek\Audio\HDA\DTSAudioService64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2696, N'EP64', N'C:\Program Files\Realtek\Audio\HDA\EP64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2697, N'RAVBg64', N'C:\Program Files\Realtek\Audio\HDA\RAVBg64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2698, N'RAVCpl64', N'C:\Program Files\Realtek\Audio\HDA\RAVCpl64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2699, N'RtkAudioService64', N'C:\Program Files\Realtek\Audio\HDA\RtkAudioService64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2700, N'RtkNGUI64', N'C:\Program Files\Realtek\Audio\HDA\RtkNGUI64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2701, N'RtlUpd64', N'C:\Program Files\Realtek\Audio\HDA\RtlUpd64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2702, N'vncutil64', N'C:\Program Files\Realtek\Audio\HDA\vncutil64.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2703, N'ConfigSecurityPolicy', N'C:\Program Files\Windows Defender\ConfigSecurityPolicy.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2704, N'MpCmdRun', N'C:\Program Files\Windows Defender\MpCmdRun.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2705, N'MpUXSrv', N'C:\Program Files\Windows Defender\MpUXSrv.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2706, N'MSASCui', N'C:\Program Files\Windows Defender\MSASCui.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2707, N'MSASCuiL', N'C:\Program Files\Windows Defender\MSASCuiL.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2708, N'MsMpEng', N'C:\Program Files\Windows Defender\MsMpEng.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2709, N'NisSrv', N'C:\Program Files\Windows Defender\NisSrv.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2710, N'OfflineScannerShell', N'C:\Program Files\Windows Defender\Offline\OfflineScannerShell.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2711, N'c2wtshost', N'C:\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2712, N'wab', N'C:\Program Files\Windows Mail\wab.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2713, N'wabmig', N'C:\Program Files\Windows Mail\wabmig.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2714, N'setup_wm', N'C:\Program Files\Windows Media Player\setup_wm.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2715, N'wmlaunch', N'C:\Program Files\Windows Media Player\wmlaunch.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2716, N'wmpconfig', N'C:\Program Files\Windows Media Player\wmpconfig.exe', 0)
+GO
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2717, N'wmplayer', N'C:\Program Files\Windows Media Player\wmplayer.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2718, N'wmpnetwk', N'C:\Program Files\Windows Media Player\wmpnetwk.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2719, N'wmpnscfg', N'C:\Program Files\Windows Media Player\wmpnscfg.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2720, N'wmprph', N'C:\Program Files\Windows Media Player\wmprph.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2721, N'wmpshare', N'C:\Program Files\Windows Media Player\wmpshare.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2722, N'wordpad', N'C:\Program Files\Windows NT\Accessories\wordpad.exe', 3)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2723, N'ImagingDevices', N'C:\Program Files\Windows Photo Viewer\ImagingDevices.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2724, N'BrowserCore', N'C:\Program Files\Windows Security\BrowserCore\BrowserCore.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2725, N'SketchBookOrion', N'C:\Program Files\WindowsApps\89006A2E.AutodeskSketchBook_1.6.0.0_x64__tf1gferkr813w\SketchBookOrion.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2726, N'_MOE_W8', N'C:\Program Files\WindowsApps\A278AB0D.MarchofEmpires_2.7.0.13_x86__h6adky7gbf63m\_MOE_W8.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2727, N'Plex', N'C:\Program Files\WindowsApps\CAF9E577.Plex_3.2.20.0_x64__aam28m9va5cke\Plex.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2728, N'Keeper', N'C:\Program Files\WindowsApps\KeeperSecurityInc.Keeper_11.0.1.0_x64__kejf07qmg0jnm\Keeper.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2729, N'wilbur', N'C:\Program Files\WindowsApps\king.com.BubbleWitch3Saga_3.4.3.0_x86__kgqvnymyfvs32\wilbur.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2730, N'stritz', N'C:\Program Files\WindowsApps\king.com.CandyCrushSodaSaga_1.98.500.0_x86__kgqvnymyfvs32\stritz.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2731, N'Builder3D', N'C:\Program Files\WindowsApps\Microsoft.3DBuilder_14.1.1302.0_x64__8wekyb3d8bbwe\Builder3D.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2732, N'Microsoft.Msn.News', N'C:\Program Files\WindowsApps\Microsoft.BingNews_4.21.2212.0_x64__8wekyb3d8bbwe\Microsoft.Msn.News.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2733, N'Microsoft.Msn.Weather', N'C:\Program Files\WindowsApps\Microsoft.BingWeather_4.21.2212.0_x64__8wekyb3d8bbwe\Microsoft.Msn.Weather.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2734, N'AppxClickHandler', N'C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.0.10332.0_x64__8wekyb3d8bbwe\AppxClickHandler.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2735, N'WhatsNew.Store', N'C:\Program Files\WindowsApps\Microsoft.Getstarted_5.11.1641.0_x64__8wekyb3d8bbwe\WhatsNew.Store.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2736, N'MessagingApplication', N'C:\Program Files\WindowsApps\Microsoft.Messaging_3.26.24002.0_x64__8wekyb3d8bbwe\MessagingApplication.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2737, N'3DViewer', N'C:\Program Files\WindowsApps\Microsoft.Microsoft3DViewer_2.1709.8012.0_x64__8wekyb3d8bbwe\3DViewer.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2738, N'View3D.ResourceResolver', N'C:\Program Files\WindowsApps\Microsoft.Microsoft3DViewer_2.1709.8012.0_x64__8wekyb3d8bbwe\View3D.ResourceResolver.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2739, N'OfficeHubTaskHost', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.8414.5925.0_x64__8wekyb3d8bbwe\Office16\OfficeHubTaskHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2740, N'OfficeHubWin32', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.8414.5925.0_x64__8wekyb3d8bbwe\Office16\OfficeHubWin32.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2741, N'DW20', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.8414.5925.0_x64__8wekyb3d8bbwe\VFS\ProgramFilesCommonX64\Microsoft Shared\DW\DW20.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2742, N'DWTRIG20', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftOfficeHub_17.8414.5925.0_x64__8wekyb3d8bbwe\VFS\ProgramFilesCommonX64\Microsoft Shared\DW\DWTRIG20.EXE', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2743, N'Solitaire', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftSolitaireCollection_3.17.8162.0_x64__8wekyb3d8bbwe\Solitaire.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2744, N'Microsoft.StickyNotes', N'C:\Program Files\WindowsApps\Microsoft.MicrosoftStickyNotes_1.8.0.0_x64__8wekyb3d8bbwe\Microsoft.StickyNotes.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2745, N'Minecraft.Windows', N'C:\Program Files\WindowsApps\Microsoft.MinecraftUWP_1.2.203.0_x64__8wekyb3d8bbwe\Minecraft.Windows.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2746, N'PaintStudio.View', N'C:\Program Files\WindowsApps\Microsoft.MSPaint_3.1709.13037.0_x64__8wekyb3d8bbwe\PaintStudio.View.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2747, N'onenoteim', N'C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.8568.57561.0_x64__8wekyb3d8bbwe\onenoteim.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2748, N'onenoteshare', N'C:\Program Files\WindowsApps\Microsoft.Office.OneNote_17.8568.57561.0_x64__8wekyb3d8bbwe\onenoteshare.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2749, N'OneConnect', N'C:\Program Files\WindowsApps\Microsoft.OneConnect_2.1709.2484.0_x64__8wekyb3d8bbwe\OneConnect.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2750, N'PeopleApp', N'C:\Program Files\WindowsApps\Microsoft.People_10.2.1451.0_x64__8wekyb3d8bbwe\PeopleApp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2751, N'SkypeApp', N'C:\Program Files\WindowsApps\Microsoft.SkypeApp_11.19.856.0_x64__kzf8qxf38zg5c\SkypeApp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2752, N'SkypeHost', N'C:\Program Files\WindowsApps\Microsoft.SkypeApp_11.19.856.0_x64__kzf8qxf38zg5c\SkypeHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2753, N'StoreExperienceHost', N'C:\Program Files\WindowsApps\Microsoft.StorePurchaseApp_11707.1707.25006.0_x64__8wekyb3d8bbwe\StoreExperienceHost.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2754, N'Microsoft.Wallet', N'C:\Program Files\WindowsApps\Microsoft.Wallet_1.0.16328.0_x64__8wekyb3d8bbwe\Microsoft.Wallet.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2755, N'Microsoft.Photos', N'C:\Program Files\WindowsApps\Microsoft.Windows.Photos_2017.39081.15820.0_x64__8wekyb3d8bbwe\Microsoft.Photos.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2756, N'Time', N'C:\Program Files\WindowsApps\Microsoft.WindowsAlarms_10.1709.2621.0_x64__8wekyb3d8bbwe\Time.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2757, N'Calculator', N'C:\Program Files\WindowsApps\Microsoft.WindowsCalculator_10.1706.2271.0_x64__8wekyb3d8bbwe\Calculator.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2758, N'WindowsCamera', N'C:\Program Files\WindowsApps\Microsoft.WindowsCamera_2017.727.40.0_x64__8wekyb3d8bbwe\WindowsCamera.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2759, N'HxAccounts', N'C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.8600.40445.0_x64__8wekyb3d8bbwe\HxAccounts.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2760, N'HxCalendarAppImm', N'C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.8600.40445.0_x64__8wekyb3d8bbwe\HxCalendarAppImm.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2761, N'HxOutlook', N'C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.8600.40445.0_x64__8wekyb3d8bbwe\HxOutlook.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2762, N'HxTsr', N'C:\Program Files\WindowsApps\microsoft.windowscommunicationsapps_17.8600.40445.0_x64__8wekyb3d8bbwe\HxTsr.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2763, N'PilotshubApp', N'C:\Program Files\WindowsApps\Microsoft.WindowsFeedbackHub_1.1705.2121.0_x64__8wekyb3d8bbwe\PilotshubApp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2764, N'Maps', N'C:\Program Files\WindowsApps\Microsoft.WindowsMaps_5.1706.2001.0_x64__8wekyb3d8bbwe\Maps.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2765, N'SoundRec', N'C:\Program Files\WindowsApps\Microsoft.WindowsSoundRecorder_10.1706.2211.0_x64__8wekyb3d8bbwe\SoundRec.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2766, N'WinStore.App', N'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11708.1001.30.0_x64__8wekyb3d8bbwe\WinStore.App.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2767, N'XboxApp', N'C:\Program Files\WindowsApps\Microsoft.XboxApp_33.33.15001.0_x64__8wekyb3d8bbwe\XboxApp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2768, N'GameBar', N'C:\Program Files\WindowsApps\Microsoft.XboxGameOverlay_1.21.11001.0_x64__8wekyb3d8bbwe\GameBar.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2769, N'XboxIdp', N'C:\Program Files\WindowsApps\Microsoft.XboxIdentityProvider_11.29.23003.0_x64__8wekyb3d8bbwe\XboxIdp.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2770, N'SpeechToTextOverlay64-Retail', N'C:\Program Files\WindowsApps\Microsoft.XboxSpeechToTextOverlay_1.14.2002.0_x64__8wekyb3d8bbwe\SpeechToTextOverlay64-Retail.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2771, N'Music.UI', N'C:\Program Files\WindowsApps\Microsoft.ZuneMusic_10.17072.16431.0_x64__8wekyb3d8bbwe\Music.UI.exe', 0)
+INSERT [dbo].[FILEEXE] ([ID], [TEN], [DUONGDAN], [solansudung]) VALUES (2772, N'Video.UI', N'C:\Program Files\WindowsApps\Microsoft.ZuneVideo_10.17082.14121.0_x64__8wekyb3d8bbwe\Video.UI.exe', 0)
+SET IDENTITY_INSERT [dbo].[FILEEXE] OFF
+ALTER TABLE [dbo].[FILEEXE] ADD  DEFAULT ((0)) FOR [solansudung]
+GO
+USE [master]
+GO
+ALTER DATABASE [SCANFILE] SET  READ_WRITE 
+GO
